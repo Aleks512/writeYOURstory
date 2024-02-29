@@ -39,8 +39,8 @@ class _StoryPageState extends State<StoryPage> {
         ),
         //TODO: Step 1 -done Add background.png to this Container as a background image.
 
-        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
-        constraints: const BoxConstraints.expand(),
+        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -66,9 +66,9 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.redAccent[700]),
-                  child: const Text(
-                    //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
-                    'Choice 1',
+                  child: Text(
+                    //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
+                    my_story.getChoice1(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
