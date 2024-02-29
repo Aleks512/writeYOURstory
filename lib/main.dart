@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:write_your_story/story_brain.dart';
 
-//TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
+//TODO: Step 15 - done Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
 
 void main() => runApp(const Destini());
 
@@ -91,7 +91,7 @@ class _StoryPageState extends State<StoryPage> {
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
                   ),
                   child: Text(
-                    //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
+                    //TODO: Step 14 - done Use the storyBrain to get the text for choice 2.
                     my_story.getChoice2(),
                     style: TextStyle(
                       fontSize: 20.0,
