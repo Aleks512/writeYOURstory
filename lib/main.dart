@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 //TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
 
-void main() => runApp(Destini());
+void main() => runApp(const Destini());
 
 class Destini extends StatelessWidget {
+  const Destini({super.key});
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: StoryPage(),
+      home: const StoryPage(),
     );
   }
 }
@@ -16,6 +19,9 @@ class Destini extends StatelessWidget {
 //TODO: Step 9 - Create a new storyBrain object from the StoryBrain class.
 
 class StoryPage extends StatefulWidget {
+  const StoryPage({super.key});
+
+  @override
   _StoryPageState createState() => _StoryPageState();
 }
 
@@ -24,20 +30,20 @@ class _StoryPageState extends State<StoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/bg_page.png"),
           ),
         ),
         //TODO: Step 1 - Add background.png to this Container as a background image.
 
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
+              const Expanded(
                 flex: 12,
                 child: Center(
                   child: Text(
@@ -58,7 +64,7 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.redAccent[700]),
-                  child: Text(
+                  child: const Text(
                     //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
                     'Choice 1',
                     style: TextStyle(
@@ -67,7 +73,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Expanded(
@@ -82,7 +88,7 @@ class _StoryPageState extends State<StoryPage> {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
                   ),
-                  child: Text(
+                  child: const Text(
                     //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
                     'Choice 2',
                     style: TextStyle(
