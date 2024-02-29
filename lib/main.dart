@@ -90,9 +90,9 @@ class _StoryPageState extends State<StoryPage> {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
                   ),
-                  child: const Text(
+                  child: Text(
                     //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                    'Choice 2',
+                    my_story.getChoice2(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
