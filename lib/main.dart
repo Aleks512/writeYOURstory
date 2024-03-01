@@ -23,6 +23,7 @@ StoryBrain my_story = StoryBrain();
 class StoryPage extends StatefulWidget {
   const StoryPage({super.key});
 
+
   @override
   _StoryPageState createState() => _StoryPageState();
 }
@@ -63,7 +64,10 @@ class _StoryPageState extends State<StoryPage> {
                   onPressed: () {
                     //Choice 1 made by user.
                     //TODO: Step 18 - done Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
-                    my_story.nextStory(1);
+                    
+                    setState(() {
+                      my_story.nextStory(1);
+                    });
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.redAccent[700]),
@@ -87,7 +91,9 @@ class _StoryPageState extends State<StoryPage> {
                   onPressed: () {
                     //Choice 2 made by user.
                     //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
-                    my_story.nextStory(2);
+                    setState(() {
+                      my_story.nextStory(2);
+                    });
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
@@ -109,6 +115,6 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 
-//TODO: Step 24 - Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
+//TODO: Step 24 -done Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
 
 //TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
