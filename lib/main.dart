@@ -51,7 +51,7 @@ class _StoryPageState extends State<StoryPage> {
                   child: Text(
                     //TODO: Step 10 - done use the storyBrain to get the first story title and display it in this Text Widget.
                     my_story.getStory(),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 25.0,
                     ),
                   ),
