@@ -18,11 +18,11 @@ Pour exécuter ce projet, vous aurez besoin de Flutter installé sur votre machi
 
 ## Installation
 
-1. Clonez le dépôt sur votre machine locale :
+1. Clonez le dépôt sur votre machine locale
 
 2. Dans le répertoire du projet, exécutez `flutter pub get` pour installer les dépendances :
 
-3. Lancez l'application sur un simulateur ou un appareil physique :
+3. Lancez l'application sur un simulateur ou un appareil physique : `flutter run`
 
 
 ## Aperçu de l'Application
