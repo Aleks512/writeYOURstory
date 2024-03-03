@@ -65,7 +65,7 @@ class _StoryPageState extends State<StoryPage> {
                     });
                   },
                   style: TextButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 131, 33, 144)),
+                      backgroundColor: Color.fromARGB(100, 131, 33, 144)),
                   child: Text(
                     my_story.getChoice1(), //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
                     style: TextStyle(
@@ -92,7 +92,7 @@ class _StoryPageState extends State<StoryPage> {
                       });
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 33, 47, 243)),
+                      backgroundColor: MaterialStateProperty.all(const Color.fromARGB(100, 33, 47, 243)),
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)), alignment: Alignment.center,
                     ),
                     child: Text(
