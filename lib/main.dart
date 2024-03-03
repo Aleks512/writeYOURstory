@@ -5,7 +5,6 @@ void main() => runApp(const Destini());
 
 class Destini extends StatelessWidget {
   const Destini({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +14,7 @@ class Destini extends StatelessWidget {
   }
 }
 
-//TODO: Step 9 - done Create a new storyBrain object from the StoryBrain class.
+//Create a new storyBrain object from the StoryBrain class.
 StoryBrain my_story = StoryBrain();
 
 class StoryPage extends StatefulWidget {
@@ -47,8 +46,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    //TODO: Step 10 - done use the storyBrain to get the first story title and display it in this Text Widget.
-                    my_story.getStory(),
+                    my_story.getStory(),//use the storyBrain to get the first story title and display it in this Text Widget.
                     style: const TextStyle(
                       fontSize: 25.0,
                     ),
@@ -59,15 +57,14 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: TextButton(
                   onPressed: () {
-                    //Choice 1 made by user.
                     setState(() {
-                      my_story.nextStory(1);
+                      my_story.nextStory(1); //Choice 1 made by user.
                     });
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: Color.fromARGB(100, 131, 33, 144)),
                   child: Text(
-                    my_story.getChoice1(), //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
+                    my_story.getChoice1(), //Use the storyBrain to get the text for choice 1.
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -79,16 +76,12 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this FlatButton.
-                //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: Visibility(
                   visible: my_story.buttonShouldBeVisible(),
                   child: TextButton(
                     onPressed: () {
-                      //Choice 2 made by user.
-                      //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                       setState(() {
-                        my_story.nextStory(2);
+                        my_story.nextStory(2);//Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                       });
                     },
                     style: ButtonStyle(
@@ -96,8 +89,7 @@ class _StoryPageState extends State<StoryPage> {
                       padding: MaterialStateProperty.all(EdgeInsets.all(20)), alignment: Alignment.center,
                     ),
                     child: Text(
-                      //TODO: Step 14 - done Use the storyBrain to get the text for choice 2.
-                      my_story.getChoice2(),
+                      my_story.getChoice2(),//Use the storyBrain to get the text for choice 2.
                       style: TextStyle(
                         fontSize: 18.0,
                       ),
@@ -112,7 +104,3 @@ class _StoryPageState extends State<StoryPage> {
     );
   }
 }
-
-//TODO: Step 24 -done Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
-
-//TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
