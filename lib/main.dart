@@ -33,11 +33,11 @@ class _StoryPageState extends State<StoryPage> {
           image: DecorationImage(
             image: AssetImage(
                 "images/bg_page.png"),
-                fit: BoxFit.cover, //TODO: Step 1 -done Add background.png to this Container as a background image.
+                fit: BoxFit.cover,
           ),
         ),
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -62,10 +62,10 @@ class _StoryPageState extends State<StoryPage> {
                     });
                   },
                   style: TextButton.styleFrom(
-                      backgroundColor: Color.fromARGB(100, 131, 33, 144)),
+                      backgroundColor: const Color.fromARGB(100, 131, 33, 144)),
                   child: Text(
                     my_story.getChoice1(), //Use the storyBrain to get the text for choice 1.
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20.0,
                     ),
                   ),
@@ -86,11 +86,11 @@ class _StoryPageState extends State<StoryPage> {
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(const Color.fromARGB(100, 33, 47, 243)),
-                      padding: MaterialStateProperty.all(EdgeInsets.all(20)), alignment: Alignment.center,
+                      padding: MaterialStateProperty.all(const EdgeInsets.all(20)), alignment: Alignment.center,
                     ),
                     child: Text(
                       my_story.getChoice2(),//Use the storyBrain to get the text for choice 2.
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18.0,
                       ),
                     ),

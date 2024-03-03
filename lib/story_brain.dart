@@ -1,7 +1,7 @@
 import 'story.dart';
 //Create a new class called StoryBrain.
 class StoryBrain {
-  List<Story> _storyData = [
+  final List<Story> _storyData = [
     Story(
         storyTitle:
             'Votre voiture a crevé un pneu sur une route sinueuse au milieu de nulle part sans réception de téléphone portable. Vous décidez de faire du stop. Un vieux pick-up rouillé s\'arrête à côté de vous. Un homme avec un large chapeau à larges bords et des yeux sans âme ouvre la porte du passager pour vous et demande : "Besoin d\'un lift, garçon ?".',
