@@ -5,42 +5,39 @@ import 'story.dart';
 class StoryBrain {
 //TODO: Step 7 - done Uncomment the lines below to include storyData as a private property in StoryBrain. Hint: You might need to change something in story.dart to make this work.
 
-List<Story> _storyData = [
-  Story(
-      storyTitle:
-          'Votre voiture a crevé un pneu sur une route sinueuse au milieu de nulle part sans réception de téléphone portable. Vous décidez de faire du stop. Un vieux pick-up rouillé s\'arrête à côté de vous. Un homme avec un large chapeau à larges bords et des yeux sans âme ouvre la porte du passager pour vous et demande : "Besoin d\'un lift, garçon ?".',
-      choice1: 'Je monte. Merci pour l\'aide !',
-      choice2: 'Mieux vaut lui demander d\'abord s\'il est un meurtrier.'),
-  Story(
-      storyTitle: 'Il acquiesce lentement, non perturbé par la question.',
-      choice1: 'Au moins, il est honnête. Je monte.',
-      choice2: 'Attends, je sais changer un pneu.'),
-  Story(
-      storyTitle:
-          'Alors que vous commencez à conduire, l\'étranger commence à parler de sa relation avec sa mère. Il devient de plus en plus en colère à chaque minute. Il vous demande d\'ouvrir la boîte à gants. À l\'intérieur, vous trouvez un couteau ensanglanté, deux doigts coupés, et une cassette d\'Elton John. Il tend la main vers la boîte à gants.',
-      choice1: 'J\'adore Elton John ! Donne-lui la cassette.',
-      choice2: 'C\'est lui ou moi ! Tu prends le couteau et le poignardes.'),
-  Story(
-      storyTitle:
-          'Quoi ? Quelle échappatoire ! Saviez-vous que les accidents de la route sont la deuxième cause principale de décès accidentel pour la plupart des groupes d\'âge adultes ?',
-      choice1: 'Recommencer',
-      choice2: ''),
-  Story(
-      storyTitle:
-          'Alors que vous fracassez la glissière de sécurité et que vous vous dirigez vers les rochers pointus en contrebas, vous réfléchissez à la sagesse douteuse de poignarder quelqu\'un pendant qu\'il conduit une voiture dans laquelle vous vous trouvez.',
-      choice1: 'Recommencer',
-      choice2: ''),
-  Story(
-      storyTitle:
-          'Vous vous liez d\'amitié avec le meurtrier en chantonnant des vers de "Can you feel the love tonight". Il vous dépose à la prochaine ville. Avant de partir, il vous demande si vous connaissez de bons endroits pour déposer des corps. Vous répondez : "Essaie le quai".',
-      choice1: 'Recommencer',
-      choice2: '')
-];
+  List<Story> _storyData = [
+    Story(
+        storyTitle:
+            'Votre voiture a crevé un pneu sur une route sinueuse au milieu de nulle part sans réception de téléphone portable. Vous décidez de faire du stop. Un vieux pick-up rouillé s\'arrête à côté de vous. Un homme avec un large chapeau à larges bords et des yeux sans âme ouvre la porte du passager pour vous et demande : "Besoin d\'un lift, garçon ?".',
+        choice1: 'Je monte. Merci pour l\'aide !',
+        choice2: 'Mieux vaut lui demander d\'abord s\'il est un meurtrier.'),
+    Story(
+        storyTitle: 'Il acquiesce lentement, non perturbé par la question.',
+        choice1: 'Au moins, il est honnête. Je monte.',
+        choice2: 'Attends, je sais changer un pneu.'),
+    Story(
+        storyTitle:
+            'Alors que vous commencez à conduire, l\'étranger commence à parler de sa relation avec sa mère. Il devient de plus en plus en colère à chaque minute. Il vous demande d\'ouvrir la boîte à gants. À l\'intérieur, vous trouvez un couteau ensanglanté, deux doigts coupés, et une cassette d\'Elton John. Il tend la main vers la boîte à gants.',
+        choice1: 'J\'adore Elton John ! Donne-lui la cassette.',
+        choice2: 'C\'est lui ou moi ! Tu prends le couteau et le poignardes.'),
+    Story(
+        storyTitle:
+            'Quoi ? Quelle échappatoire ! Saviez-vous que les accidents de la route sont la deuxième cause principale de décès accidentel pour la plupart des groupes d\'âge adultes ?',
+        choice1: 'Recommencer',
+        choice2: ''),
+    Story(
+        storyTitle:
+            'Alors que vous fracassez la glissière de sécurité et que vous vous dirigez vers les rochers pointus en contrebas, vous réfléchissez à la sagesse douteuse de poignarder quelqu\'un pendant qu\'il conduit une voiture dans laquelle vous vous trouvez.',
+        choice1: 'Recommencer',
+        choice2: ''),
+    Story(
+        storyTitle:
+            'Vous vous liez d\'amitié avec le meurtrier en chantonnant des vers de "Can you feel the love tonight". Il vous dépose à la prochaine ville. Avant de partir, il vous demande si vous connaissez de bons endroits pour déposer des corps. Vous répondez : "Essaie le quai".',
+        choice1: 'Recommencer',
+        choice2: '')
+  ];
 
-
-//TODO: Step 23 - Use the storyNumber property inside getStory(), getChoice1() and getChoice2() so that it gets the updated story and choices rather than always just the first (0th) one.
-
-//TODO: Step 8 - Create a method called getStory() that returns the first storyTitle from _storyData.
+//TODO: Step 23 - doneUse the storyNumber property inside getStory(), getChoice1() and getChoice2() so that it gets the updated story and choices rather than always just the first (0th) one.
   String getStory() {
     return _storyData[_storyNumber].storyTitle;
   }
@@ -54,7 +51,7 @@ List<Story> _storyData = [
   String getChoice2() {
     return _storyData[_storyNumber].choice2;
   }
-//TODO: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
+//TODO: Step 25 - done Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
 
 //TODO: Step 16 - Create a property called storyNumber which starts with a value of 0. This will be used to track which story the user is currently viewing.
   int _storyNumber = 0;
@@ -83,8 +80,16 @@ List<Story> _storyData = [
 
   void restart() {
     _storyNumber = 0;
-  }    
   }
+
+  buttonShouldBeVisible() {
+    if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
 //TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
 
