@@ -33,7 +33,8 @@ class _StoryPageState extends State<StoryPage> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-                "images/bg_page.png"), //TODO: Step 1 -done Add background.png to this Container as a background image.
+                "images/bg_page.png"),
+                fit: BoxFit.cover, //TODO: Step 1 -done Add background.png to this Container as a background image.
           ),
         ),
         padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
@@ -64,7 +65,7 @@ class _StoryPageState extends State<StoryPage> {
                     });
                   },
                   style: TextButton.styleFrom(
-                      backgroundColor: Colors.redAccent[700]),
+                      backgroundColor: Color.fromARGB(255, 131, 33, 144)),
                   child: Text(
                     my_story.getChoice1(), //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
                     style: TextStyle(
@@ -91,13 +92,14 @@ class _StoryPageState extends State<StoryPage> {
                       });
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 33, 47, 243)),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)), alignment: Alignment.center,
                     ),
                     child: Text(
                       //TODO: Step 14 - done Use the storyBrain to get the text for choice 2.
                       my_story.getChoice2(),
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 18.0,
                       ),
                     ),
                   ),
