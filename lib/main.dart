@@ -26,7 +26,6 @@ class StoryPage extends StatefulWidget {
 }
 
 class _StoryPageState extends State<StoryPage> {
-  bool visible = my_story.buttonShouldBeVisible();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,8 +66,7 @@ class _StoryPageState extends State<StoryPage> {
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.redAccent[700]),
                   child: Text(
-                    my_story
-                        .getChoice1(), //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
+                    my_story.getChoice1(), //TODO: Step 13 - done Use the storyBrain to get the text for choice 1.
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -83,7 +81,7 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this FlatButton.
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: Visibility(
-                  visible: visible,
+                  visible: my_story.buttonShouldBeVisible(),
                   child: TextButton(
                     onPressed: () {
                       //Choice 2 made by user.

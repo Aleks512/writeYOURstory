@@ -82,10 +82,13 @@ class StoryBrain {
     _storyNumber = 0;
   }
 
-  buttonShouldBeVisible() {
+  bool buttonShouldBeVisible() {
     if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+      print("should be visible");
       return true;
     } else {
+      print("should not be visible");
+
       return false;
     }
   }
